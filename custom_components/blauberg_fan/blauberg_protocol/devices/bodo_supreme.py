@@ -117,8 +117,8 @@ bodo_supreme = BlaubergDevice(
                 0x04: variable_to_bytes(input),
             },
         ),
-        Purpose.MOISTURE_SENSOR: SinglePointAction(0x2E),
-        Purpose.TEMPERATURE_SENSOR: SinglePointAction(0x25),
+        Purpose.MOISTURE_SENSOR: SinglePointAction(0x25),
+        Purpose.TEMPERATURE_SENSOR: SinglePointAction(0x21),
         Purpose.PRESET: preset_action,
         Purpose.VERSION: ComplexAction(
             parameters=[0x86],
