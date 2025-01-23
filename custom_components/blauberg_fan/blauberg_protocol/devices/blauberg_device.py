@@ -75,7 +75,8 @@ def variable_to_bytes(variable: float | str | int | bool | None) -> int:
         return -1
     if isinstance(variable, float):
         # since float is not supported by the blauberg fans, they are all converted to integers
-        return int(variable)
+        # now converting to float, as flexit fans support this. testing. should also differenciate between types of fans here if it works. TODO
+        return float(variable)
     if isinstance(variable, str):
         return int.from_bytes(bytes(variable, "utf-8"), "big")
     if isinstance(variable, bool):
